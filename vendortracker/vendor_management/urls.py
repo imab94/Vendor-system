@@ -13,6 +13,10 @@ urlpatterns = [
     # Purchase Orders
     path('purchase_orders/', views.PurchaseOrderListCreateView.as_view(), name='purchase-order-list-create'),
     path('purchase_orders/<int:pk>/', views.PurchaseOrderRetrieveUpdateDestroyView.as_view(), name='purchase-order-detail'),
+    
+    # purchase acknowledged
+    path('purchase_orders/acknowledge/<int:pk>/', views.PurchaseOrderRetrieveView.as_view(),name='purchase-acknowledge-order'),
+
 
     # Vendor Performance Evaluation
     path('vendors/<int:vendor_id>/initial-performance/', views.CreateInitialPerformanceMetricsView.as_view(), name='create_initial_performance_metrics'),

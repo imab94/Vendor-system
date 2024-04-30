@@ -142,3 +142,20 @@ class VendorPerformanceView(generics.RetrieveAPIView):
         serializer = self.get_serializer(data=performance_metrics)
         serializer.is_valid()
         return Response(serializer.data)
+
+    
+class PurchaseOrderRetrieveView(generics.RetrieveAPIView):
+    queryset = PurchaseOrder.objects.all()
+    serializer_class = PurchaseOrderSerializer
+
+    def post(self, request, *args, **kwargs):
+        instance = self.get_object()
+
+        # adding acknowledgment_date
+        instance.acknowledgment_date = timezone.now()
+        instance.save()
+        serializer = self.get_serializer(instance)
+
+        return Response({'message': 'Purchase order acknowledged successfully.',
+                         'data':serializer.data
+                         })
