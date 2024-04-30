@@ -15,5 +15,6 @@ urlpatterns = [
     path('purchase_orders/<int:pk>/', views.PurchaseOrderRetrieveUpdateDestroyView.as_view(), name='purchase-order-detail'),
 
     # Vendor Performance Evaluation
+    path('vendors/<int:vendor_id>/initial-performance/', views.CreateInitialPerformanceMetricsView.as_view(), name='create_initial_performance_metrics'),
     path('vendors/<int:pk>/performance/', views.VendorPerformanceView.as_view(), name='vendor-performance'),
 ]
