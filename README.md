@@ -70,11 +70,33 @@
 
 
 ## Step 10:
-   **Get details of a Purchase Order**  
-   paste this url into Postman with GET request to get detail of a Purchase Order.
-   - make sure you have added Authorization as key and Bearer Token as value.
+   **create a Purchase Order**  
+   paste this url into Postman with POST request to create a Purchase order.
+   
+      http://127.0.0.1:8000/api/purchase_orders/
+      
+   - make sure you have added Authorization as key and Bearer Token as value and JSON demo Data in body.
 
-           http://127.0.0.1:8000/api/purchase_orders/1/
+         {
+          "po_number": "PO346789",
+          "items": [
+              {
+                  "name": "Item6",
+                  "description": "Description of Item6",
+                  "quantity": 14,
+                  "price": 150
+              },
+              {
+                  "name": "Item7",
+                  "description": "Description of Item7",
+                  "quantity": 2,
+                  "price": 80
+              }
+          ],
+          "quantity": 8,
+          "issue_date": "2024-05-01T12:00:00Z",
+          "vendor": 1
+         }
 
       
    
