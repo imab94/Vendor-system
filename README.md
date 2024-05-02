@@ -1,5 +1,9 @@
 ## Step 1:
-   Install the requirements.txt file in your virtualenv.
+   1. Download zip code in your local machine.Install the requirements.txt file in your virtualenv.
+   2. go to project directory i.e. vendortracker.
+   3. Run this command to make the local sever (Django Server) live.
+
+            python manage.py runserver
 
 ## Step 2:
    Some demo data are already stored in Default database sqlite3.
