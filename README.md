@@ -55,14 +55,14 @@
 
 
 ## Step 8:
-   **Get Purchase Order List**  
+   **Get Purchase Order List.**  
    paste this url into Postman with GET request to get all Purchase Order Lists.
    - make sure you have added Authorization as key and Bearer Token as value.
 
            http://127.0.0.1:8000/api/purchase_orders/
 
 ## Step 9:
-   **Get details of a Purchase Order**  
+   **Get details of a Purchase Order.**  
    paste this url into Postman with GET request to get detail of a Purchase Order.
    - make sure you have added Authorization as key and Bearer Token as value.
 
@@ -70,7 +70,7 @@
 
 
 ## Step 10:
-   **create a Purchase Order**  
+   **create a Purchase Order.**  
    paste this url into Postman with POST request to create a Purchase order.
    
       http://127.0.0.1:8000/api/purchase_orders/
@@ -98,5 +98,22 @@
           "vendor": 1
          }
 
-      
-   
+## Step 11:
+   **make acknowledgement of a purchase order.**
+   paste this url into postman and make sure you have added Bearer Token as Authorization Token.
+
+      http://127.0.0.1:8000/api/purchase_orders/acknowledge/1/
+
+
+## Step 12:
+   **make initial performance of vendors**
+   paste this url into postman and make sure you have added Bearer Token as Authorization Token.
+
+         http://127.0.0.1:8000/api/vendors/3/initial-performance/
+
+## Step 13:
+   **get performace of a specific vendor like on_time_delivery,quality_rating_avg,average_response_time,full_fillment_rate.**
+   paste this url into postman and make sure you have added Bearer Token as Authorization Token.
+
+
+      http://127.0.0.1:8000/api/vendors/1/performance/       #for vendor 1
