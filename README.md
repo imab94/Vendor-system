@@ -1,7 +1,12 @@
 ## Step 1:
-   1. Download zip code in your local machine.Install the requirements.txt file in your virtualenv.
-   2. go to project directory i.e. vendortracker.
-   3. Run this command to make the local sever (Django Server) live.
+   1. Download zip code of vendor system in your local machine.
+   2. create virtual env using this command
+
+            python -m venv name_of_env
+      
+   4. Install the requirements.txt file inside your virtualenv.
+   5. go to project directory i.e. vendortracker.
+   6. Run this command to make the local sever (Django Server) live.
 
             python manage.py runserver
 
